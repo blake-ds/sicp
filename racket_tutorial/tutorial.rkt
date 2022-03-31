@@ -69,3 +69,18 @@
 (rainbow (square 10))
 (apply vc-append (rainbow (square 5)))
 (apply vc-append (rainbow (filled-rectangle 200 5)))
+
+
+(require pict/flash)
+(filled-flash 40 30)
+
+
+(require racket/class
+         racket/gui/base)
+(define f (new frame% [label "My Art"]
+                      [width 300]
+                      [height 300]
+                      [alignment '(center center)]))
+ 
+
+(send f show #t)
